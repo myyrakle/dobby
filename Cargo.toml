@@ -1,16 +1,18 @@
 [package]
-name = "rust_template"
+name = "dobby"
 version = "0.1.0"
 edition = "2024"
-license = "MIT" 
-authors = ["myyrakle <sssang97@naver.com>"] 
-description = "..." 
-keywords = ["1", "2", "3"] 
+license = "MIT"
+authors = ["myyrakle <sssang97@naver.com>"]
+description = "Local dev environment janitor: merged worktrees, build artifacts, package caches, docker"
+keywords = ["cleanup", "gc", "worktree", "cache", "mcp"]
 include = ["src/*", "Cargo.toml"]
-exclude = []
 readme = "README.md"
-repository = "https://github.com/myyrakle/rust_template"
-documentation = "https://github.com/myyrakle/rust_template/blob/master/README.md"
-homepage = "https://github.com/myyrakle/rust_template/blob/master/README.md"
+repository = "https://github.com/myyrakle/dobby"
 
 [dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "1"
